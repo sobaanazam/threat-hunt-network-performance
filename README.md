@@ -73,31 +73,31 @@ This analysis revealed the execution of a PowerShell script named portscan.ps1 s
 
 ### Host Validation
 
-A manual review of the affected system confirmed:
-	- The portscan.ps1 script was explicitly designed to conduct internal port scanning
-	- The script was executed using the SA (privileged) account
-	- The activity was not authorized, documented, or part of any approved administrative task
+A manual review of the affected system confirmed:  
+	- The portscan.ps1 script was explicitly designed to conduct internal port scanning  
+	- The script was executed using the SA (privileged) account  
+	- The activity was not authorized, documented, or part of any approved administrative task  
 
 <img width="646" height="215" alt="Screenshot 2026-02-10 at 2 01 24 PM" src="https://github.com/user-attachments/assets/53eadad0-8c45-4efc-b999-2b532e6ec75d" />
 
 ### MITRE ATT&CK Mapping (TTPs)
-Tactic: Discovery
-Technique: T1046 – Network Service Discovery
-Procedure: Automated internal port scanning across multiple hosts using PowerShell
+Tactic: Discovery  
+Technique: T1046 – Network Service Discovery  
+Procedure: Automated internal port scanning across multiple hosts using PowerShell  
 
-Tactic: Execution
-Technique: T1059.001 – Command and Scripting Interpreter: PowerShell
-Procedure: Execution of a custom PowerShell script (portscan.ps1)
+Tactic: Execution  
+Technique: T1059.001 – Command and Scripting Interpreter: PowerShell  
+Procedure: Execution of a custom PowerShell script (portscan.ps1)  
 
-Tactic: Privilege Escalation / Defense Evasion
-Technique: T1078 – Valid Accounts
-Procedure: Unauthorized use of a privileged service account to perform reconnaissance
+Tactic: Privilege Escalation / Defense Evasion  
+Technique: T1078 – Valid Accounts  
+Procedure: Unauthorized use of a privileged service account to perform reconnaissance  
 
 ## Response Actions
-	- Immediately isolated the affected device from the network
-	- Conducted a full malware scan (no malware detected)
-	- Maintained isolation due to confirmed unauthorized reconnaissance behavior
-	- Opened a ticket for full device reimage and rebuild
+	- Immediately isolated the affected device from the network  
+	- Conducted a full malware scan (no malware detected)  
+	- Maintained isolation due to confirmed unauthorized reconnaissance behavior  
+	- Opened a ticket for full device reimage and rebuild  
 
   
 ## Conclusion
